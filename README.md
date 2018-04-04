@@ -1,5 +1,4 @@
 # RecyclerView
-# RecyclerView
 ## RecyclerView简介
  RecyclerView 只创建充满屏幕的 View。它的任务只是回收和定位屏幕上的View，其他的事情交给它的两个子类 ViewHolder 和 Adapter 处理，下面介绍这两个子类。
  ## Viewholder
