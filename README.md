@@ -99,18 +99,6 @@ private void updateUI() {
 ### 总结
 说了这么多感觉还是好乱，现在来理一理思路。当 RecycleView 需要显示视图时，就会去找它的 Adapter 。首先，调用 Adapter 的 **getItemCount()**，得到数组的大小，接着 RecycleView 调用 Adapter 的 **onCreatViewHoder(ViewGroup, int)** 方法创建 ViewHolder 及其显示的视图，Adapter 就会找到并填充到 ViewHolder 的视图上。
 
-```
-sequenceDiagram
-RevycleView->>Adapter: getItemCount()
-Adapter->>RevycleView: 100
-RevycleView->>Adapter: onCreatViewHolder()
-Adapter->>RevycleView: ViewHolder
-RevycleView->>Adapter: onBindViewHolder()
-RevycleView->>Adapter: onCreatViewHolder()
-Adapter->>RevycleView: ViewHolder
-RevycleView->>Adapter: onBindViewHolder()
-```
-
 
 [github地址](https://github.com/YueJZJM/RecyclerView)
 
