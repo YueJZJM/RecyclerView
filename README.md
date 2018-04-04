@@ -1,4 +1,5 @@
 # RecyclerView
+# RecyclerView
 ## RecyclerView简介
  RecyclerView 只创建充满屏幕的 View。它的任务只是回收和定位屏幕上的View，其他的事情交给它的两个子类 ViewHolder 和 Adapter 处理，下面介绍这两个子类。
  ## Viewholder
@@ -97,7 +98,7 @@ private void updateUI() {
 }
 ```
 ### 总结
-说了这么多感觉还是好乱，现在来理一理思路。当 RecycleView 需要显示视图时，就会去找它的 Adapter 。首先，调研 Adapter 的 **getItemCount()**，得到数组的大小，接着 RecycleView 调用 Adapter **的onCreatViewHoder(ViewGroup, int)** 方法创建 ViewHolder 及其显示的视图，Adapter 就会找到并填充到 ViewHolder 的视图上。
+说了这么多感觉还是好乱，现在来理一理思路。当 RecycleView 需要显示视图时，就会去找它的 Adapter 。首先，调用 Adapter 的 **getItemCount()**，得到数组的大小，接着 RecycleView 调用 Adapter 的 **onCreatViewHoder(ViewGroup, int)** 方法创建 ViewHolder 及其显示的视图，Adapter 就会找到并填充到 ViewHolder 的视图上。
 
 ```
 sequenceDiagram
